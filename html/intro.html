@@ -1,0 +1,188 @@
+<html lang="fr">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <meta name="description" content="Jean Bart et Louis XIV, drames maritimes du XVIIe siècle">
+      <meta name="keywords" content="Jean Bart, TEI, Eugène Sue">
+      <meta name="author" content="Victor Meynaud">
+      <title>Jean Bart et Louis XIV, drames maritimes du XVIIe siècle</title>
+      <style>
+                         figure {
+                        border: 1px #cccccc solid;
+                        padding: 4px;
+                        margin: auto;
+                        }
+                         figcaption {
+                         background-color: grey;
+                         color: black;
+                         font-style: italic;
+                         padding: 2px;
+                         text-align: center;
+                         }
+                    </style>
+   </head>
+   <body>
+      <h1>Introduction : données issues de la documentation ODD-HTML</h1>
+      <figure><img src="./sue.jpg" class="img-fluid" alt="Responsive image" align="left" width="400" height="550"><figcaption>Portrait d'Eugène Sue réalisé en 1835 par François Gabriel Guillaume Lépaulle (source
+            : Wikimédia Commons)</figcaption>
+      </figure>
+      <h2>L'auteur</h2>
+      <p class="h6">Cf. <a href="https://fr.wikipedia.org/wiki/Eug%C3%A8ne_Sue">Wikipedia</a></p>
+      <div>Eugène Sue est un auteur français né en 1804 et mort en 1857. Après avoir été formé par les institutions militaires de la Restauration, il mena
+         une carrière de médecin de marine durant laquelle il participa aux interventions militaires
+         de la France des Bourbons en Espagne et en Grèce. Politiquement, il s'engage à gauche
+         et est élu député de la IIe République. Il est contraint à l'exil après le coup d'Etat
+         de Louis-Napoléon Bonaparte.
+         
+         Ces quelques notions biographiques sont impotantes pour comprendre les choix d'encodage
+         réalisés. Les deux principaux points qui ont guidé l'encodage sont les suivants. Premièrement,
+         Sue a produit un ouvrage pseudo-historique qu'il convient de remettre en contexte
+         avec ses engagements politiques personnels et avec les idées nationales-romantiques
+         qui imprégnaient son époque. Deuxièmement, son ouvrage traite de la marine, sujet
+         qu'il maîtrisait. De plus, la marine du milieu du XIXe siècle était encore quasi-exclusivement
+         une marine à voile, comme celle de l'époque de Mazarin.
+         </div>
+      <h2>L'édition</h2>
+      <p class="h6">Cf. <a href="https://gallica.bnf.fr/ark:/12148/bpt6k6365618w.texteImage">Gallica</a></p>
+      <div>
+         Cette édition a été publiée par Marescq et Cie à Paris en 1851. Elle contient des illustrations de Jean-Adolphe Beaucé. L'édition est mise à disposition librement par la BnF sous une licence Domaine public. L'encodage TEI dont il est donné une représentation HTML ici concerne le livre 1, chapitre 1, pages 2 à 3. 
+         
+         
+         <h2>La visualisation HTML</h2>
+         <p>Il a été décidé de réaliser une visualisation HTML de l'encodage TEI. Celui-ci a pour
+            but de permettre la lecture
+            du texte, la visualisation des éléments que l'encodage TEI permet de faire ressortir
+            ainsi que la compréhension des éléments de l'apparat critique comme on pourrait les
+            voir dans une édition papier.</p>
+         <p>La visualisation comporte les éléments suivants :</p>
+         <ul>
+            <li>Coloration des dialogues selon le locuteur.</li>
+            <li>Liens cliquables vers l'index des personnages et des lieux.</li>
+            <li>Visualisation des notes et autres éléments de l'apparat critique au survol de la souris.</li>
+         </ul>
+         <h2>Remarques scientifiques</h2>
+         <div>
+            <h3>
+               Guide d'encodage d'une édition partielle en XML-TEI de
+               <i>Jean Bart et Louis XIV : drames maritimes du XVIIe siècle</i>
+               d'Eugène Sue (1804-1857). <small class="text-muted">Cette édition a été réalisée dans le cadre d'un
+                  devoir de XML-TEI pour le cours d'A. Pinche dans le cadre du Master TNAH de
+                  l'Ecole nationale des chartes.</small></h3>
+            <p class="small">
+               Cette édition partielle a été encodée en suivant les 
+               <hi>guidelines</hi> du
+               TEI Consortium. Ces principes d'encodage ont pour but de garantir la
+               pérennité , l'interopérabilité et les possibilités de transformation des
+               données dans un contexte scientifique. L'encodage proposé est donc
+               
+               <hi>TEI conformant</hi>.
+               </p>
+            <div>
+               <h3>
+                  Explications des principaux choix d'encodage.
+                  </h3>
+               <p>
+                  L'élément majeur de l'encodage de l'oeuvre de Sue a été l'indexation des
+                  noms de personne et de lieu. Par exemple :
+                  <code>
+                     <person xml:id="louis_xiv">
+                        <persName>Louis XIV</persName>
+                        <note>roi de France et de Navarre</note>
+                        <idno type="Wikidata">https://www.wikidata.org/wiki/Q7742</idno>
+                     </person></code>
+                  Grâce à à l'attribut <code>xml:id</code> et au pointeur <code>ref</code>, la TEI
+                  permet de créer une référence d'autorité dans le <code>TEIheader</code> vers
+                  laquelle chaque occurence du nom de personnage va pointer même si celui-ci
+                  est, par exemple, est un surnom. D'un point de vue scientifique, cet
+                  encodage permet, par exemple, de voir comment Sue imaginait la relation
+                  entre un mari et sa femme au XVIIe siècle. Un utilisateur pourra ainsi
+                  automatique accéder à toutes les expressions utilisées pour faire
+                  référence à un personnage (nom, surnom, nom et qualificatif etc.). Pour
+                  les personnages historiques pour lesquels cela était possible, il a été
+                  choisi d'exprimer un lien vers la notice d'autorité 
+                  <hi>Wikidata</hi> afin
+                  de lever toute ambiguïté possible pour le lecteur.
+                  </p>
+               <p>
+                  Pour l'indexation des noms de lieu, étant donnée la localisation
+                  géographique des évènements racontés, un choix de standardisation des
+                  toponymes a été nécessaire, par exemple entre le français et le
+                  néerlandais. Il a été choisi de respecter l'usage officiel contemporain en
+                  Belgique ou en France. Cela ne préjuge aucunement des choix faits par Sue
+                  étant donné qu'à l'époque de publication le français était la seule langue
+                  officielle du Royaume de Belgique.
+                  </p>
+               <p>
+                  Un choix éditorial fort, repésenté par la balise TEI
+                  <code>
+                     <choice></choice></code>
+                  a dû être réalisé pour quelque chose qui a été interprété comme une erreur
+                  d'impression.
+                  </p>
+               <p>
+                  L'encodage a été réalisé à partir de l'OCR de l'édition originale mise à
+                  dispistion par Gallica, le portail numérique de la Bibliothèque nationale
+                  de France. Quelques corrections mineures de l'OCR ont été faites
+                  manuellement, par exemple le rajout des points de suspension.
+                  </p>
+               <p>
+                  Les dialogues, importants dans l'extrait, on été encodés par la balise
+                  classique <code>said</code>. Conformément aux 
+                  <hi>guidelines</hi>, uniquement
+                  ce qui est strictement du discours direct a été encodé de cette façon.
+                  </p>
+               <p>
+                  Il a été choisi de réaliser un glossaire en marge de l'édition placé dans
+                  la balise <code>standoff</code>. Il est utilisé pour expliciter des termes qui
+                  pourrait être difficiles à comprendre aujourd'hui, par exemple les termes
+                  de marine. Le glossaire renseigne aussi sur certains mots qui,
+                  probablement choisis spécifiquement par l'auteur dans sa volonté d'écrire
+                  un récit historicisant, pouvaient déjà appraître comme vieillis au milieu
+                  du XIXe siècle. Les balises contenues dans le glossaire ont été choisiées
+                  d'après la section 
+                  <hi>Dictionaries</hi> des 
+                  <hi>TEI guidelines</hi>.
+                  </p>
+               <div>
+                  Pour réaliser le glossaire, nous avons décidé d'utiliser deux
+                  dictionnaires relativement proches dans le temps de l'auteur :
+                  
+                  <ul>
+                     <li><i>Dictionnaire de l'Académie française, 1835 (6ème édition).</i></li>
+                     <li>
+                        Emile Littré,
+                        <i>Dictionnaire de la langue française</i>, Hachette,
+                        Paris, 1863.
+                        </li>
+                  </ul>
+                  Dans le cadre de l'exercie, nous avons décidé que l'attribut
+                  <code>glossaire</code> serait le seul possible pour la balise
+                  
+                  <gi>standoff</gi>.
+                  </div>
+               <p>
+                  Les notes de bas de page, représentées par l'encodage classique des
+                  références recommandé par les 
+                  <hi>TEI guidelines</hi> sont toutes de
+                  l'auteur lorsqu'elles ont l'attribut <code>resp="auteur"</code>. L'élément
+                  <code>ref</code> avec l'attribut <code>resp="editeur"</code> a été choisi pour
+                  symboliser les notes de l'éditeur. Elles servent de pointeur vers le
+                  glossaire. On différencie ainsi les notes de bas de page de l'auteur et le
+                  lexique qui est le fait de l'éditeur. Grâce à l'encodage TEI, un
+                  utilisateur pourrait faire automatiquement des extractions et ainsi voir les
+                  explications que Sue a voulu donner à son propre travail ou encore le type
+                  de vocabulaire qu'il considérait comme difficile pour ses contemporains ou alors le
+                  vocabulaire qui a été expliqué par l'éditeur.
+                  Il en va de même pour les quelques passages en italique encodés via la
+                  balise 
+                  <codes>highlighted</codes> des 
+                  <hi>TEI guidelines</hi>.
+                  </p>
+            </div>
+         </div>
+      </div>
+   </body>
+   <footer>
+      <div><a href="index.html">Retour à l'accueil</a></div>
+   </footer>
+</html>

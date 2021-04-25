@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Excellent projet d'encodage -->
+<?xml-model href="odd/out/sue_odd.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <!-- Le fichier TEI -->
+         <titleStmt>
+            <title>Jean Bart et Louis XIV, drames maritimes du XVIIe siècle</title>
+            <author>Eugène Sue</author>
+            <respStmt>
+               <resp>Encodage réalisé dans le cadre d'un devoir du Master TNAH</resp>
+               <persName>
+                  <forename>Victor</forename>
+                  <surname>Meynaud</surname>
+               </persName>
+            </respStmt>
+         </titleStmt>
+         <!-- Element 'publication statement' obligatoire ici -->
+         <publicationStmt>
+            <publisher>Marescq et Cie</publisher>
+            <pubPlace>Paris</pubPlace>
+            <date when="1851"/>
+         </publicationStmt>
+         <sourceDesc>
+            <!-- La source papier -->
+            <biblFull>
+               <titleStmt>
+                  <title type="main">Jean Bart et Louis XIV</title>
+                  <title type="subtitle">drames maritimes du XVIIe siècle</title>
+                  <author><forename>Eugène</forename>
+                     <surname>Sue</surname>
+                     <date type="birth">1804</date>
+                     <date type="death">1857</date>
+                     <country>France</country>
+                  </author>
+                  <respStmt>
+                     <resp>Illustrateur</resp>
+                     <persName><forename>Jean-Adolphe</forename>
+                        <surname>Beaucé</surname></persName>
+                  </respStmt>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>Marescq et Cie</publisher>
+                  <date>1851</date>
+                  <pubPlace>Paris</pubPlace>
+                  <distributor facs="https://gallica.bnf.fr/ark:/12148/bpt6k6365618w/f13.item"
+                     >BnF</distributor>
+                  <availability>
+                     <licence>Domaine public</licence>
+                  </availability>     
+               </publicationStmt>
+               <seriesStmt>
+                  <title>Jean Bart et Louis XIV, drames maritimes du XVIIe siècle</title>
+                  <biblScope unit="book" n="1"/>
+                  <biblScope unit="chapter" n="1"/>
+                  <biblScope unit="page" from="2" to="3"/>
+               </seriesStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+     <profileDesc>
+        <settingDesc>
+           <!-- index des lieux -->
+           <listPlace>
+              <place xml:id="dunkerque">
+                 <placeName>Dunkerque</placeName>
+                 <note>En 1658, au début de l'histoire, Dunkerque est le lieu d'une bataille opposant une coalition franco-anglaise aux Espagnols dans le cadre de la guerre franco-espagnole (1635-1659).</note>
+              </place>
+              <place xml:id="bergues">
+                 <placeName>Bergues</placeName>
+                 <note>Bergues est située dans l'actuel département du Nord.</note>
+              </place>
+              <place xml:id="veurne">
+                 <placeName>Veurne</placeName>
+                 <placeName>Furnes</placeName>
+                 <note>Furnes est aujourd'hui une commune située dans la province de Flandre-Occidentale. Sue utilise dans son ouvrage le nom français plutôt que le nom flamand. En effet, à l'époque de la rédaction, le français était la seule langue officielle du Royaume de Belgique.</note>
+              </place>
+              <place xml:id="effarinchouque">
+                 <placeName>Effarinchouque</placeName>
+                 <note>Lieu non-identifié. Probablement une rivière.</note>
+              </place>
+              <place xml:id="hollande">
+                 <placeName>Hollande</placeName>
+                 <note>Région historique correspondant aux actuelles provinces néerlandaises de Hollande méridionale et septentrionale.</note>
+              </place>
+              <place xml:id="mardyck">
+                 <placeName>Mardyck</placeName>
+                 <note>Ancienne commune française du département du Nord.</note>
+              </place>
+           </listPlace>
+        </settingDesc>
+        <particDesc>
+           <!-- index personnages (participation) -->
+           <listPerson>
+              <person>
+                 <persName>
+                    <forename>Cornille</forename>
+                    <surname>Bart</surname>
+                 </persName>
+                 <note>Père de Jean Bart</note>
+              </person>
+              <person xml:id="catherine_bart">
+                 <persName>
+                   <forename>Catherine</forename>
+                   <surname>Bart</surname>
+                   <addName type="nom_de_jeune_fille">Janssen</addName>
+                 </persName>
+                 <note>Mère de Jean Bart</note>
+              </person>
+              <person xml:id="jean_bart">
+                 <persName>
+                    <forename>Jean</forename>
+                    <surname>Bart</surname>
+                 </persName>
+                 <date when="1650-10-21" type="birth">1650</date>
+                 <date when="1702-04-27" type="death">1702</date>
+                 <idno type="Wikidata">https://www.wikidata.org/wiki/Q333388</idno>
+              </person>
+              <person xml:id="jacques_seyrac">
+                 <persName>
+                 <forename>Jacques</forename>
+                 <surname>Seyrac</surname>
+                 <addName type="surnom">Haran-Sauret</addName>
+                <!-- <addName type="surnom">Sauret</addName> -->
+                 </persName>
+              </person>
+              <person xml:id="hocquincourt">
+                 <persName>
+                    <forename>Charles</forename>
+                    <surname>de Monchy</surname>
+                    <addName type="nom_de_terre">marquis d'Hocquincourt</addName>
+                 </persName>
+                  <date when="1599" type="birth">1599</date>
+                  <date when="1702-06-13" type="death">1658</date>
+                  <idno type="Wikidata">https://www.wikidata.org/wiki/Q2960648</idno>
+              </person>
+              <person xml:id="turenne">
+                 <persName>
+                    <forename>Henri</forename>
+                    <surname>de la Tour d'Auvergne</surname>
+                    <addName type="nom_de_terre">Turenne</addName>
+                 </persName>
+                 <date when="1611-09-11" type="birth">1611</date>
+                 <date when="1675-07-27" type="death">1675</date>
+                 <idno type="Wikidata">https://www.wikidata.org/wiki/Q303216</idno>
+              </person>
+              <person xml:id="louis_xiv">
+                 <persName>
+                    <forename>Louis</forename>
+                    <surname>XIV</surname>
+                 </persName>
+                 <note>roi de France et de Navarre</note>
+                 <date when="1638-09-05" type="birth">1638</date>
+                 <date when="1715-09-01" type="death">1715</date>
+                 <idno type="Wikidata">https://www.wikidata.org/wiki/Q7742</idno>
+              </person>
+              <person xml:id="lockhart">
+                 <persName>William</persName>
+                 <persName>
+                    <forename>William</forename>
+                    <surname>Lockhart of Lee</surname>
+                 </persName>
+                 <date when="1621" type="birth">1621</date>
+                 <date when="1675" type="death">1675</date>
+                 <idno type="Wikidata">https://www.wikidata.org/wiki/Q8014658</idno>
+              </person>
+              <person xml:id="cromwell">
+                 <persName>
+                    <forename>Oliver</forename>
+                    <surname>Cromwell</surname>
+                 </persName>
+                 <date when="1599-04-25" type="birth">1599</date>
+                 <date when="1658-09-03" type="death">1658</date>
+                 <idno type="Wikidata">https://www.wikidata.org/wiki/Q44279</idno>
+              </person>
+              <person xml:id="lede">
+                 <persName>
+                    <forename>Guillaume</forename>
+                    <surname>de Bette</surname>
+                    <addName type="nom_de_terre">marquis de Lède</addName>
+                 </persName>
+                 <date when="1600" type="birth">c.1600</date>
+                 <date when="1658-09-03" type="death">1658</date>
+                 <idno type="Wikidata">https://www.wikidata.org/wiki/Q15884001</idno>
+              </person>
+              <person xml:id="mazarin">
+                 <persName>Jules Mazarin</persName>
+                 <persName>
+                    <forename>Jules</forename>
+                    <surname>Mazarin</surname>
+                 </persName>
+                 <date when="1602-07-14" type="birth">1602</date>
+                 <date when="1661-03-09" type="death">1661</date>
+                 <idno type="Wikidata">https://www.wikidata.org/wiki/Q166056</idno>
+              </person>
+              <person xml:id="john_brish">
+                 <persName>
+                    <forename>John</forename>
+                    <surname>Brish</surname>
+                 </persName>
+                 <note>Fils du voisin des Bart</note>
+              </person>
+              <person xml:id="michel_jacobsen">
+                 <persName>
+                  <forename>Michel</forename>
+                  <surname>Jacobsen</surname>
+                  <addName type="surnom">Le Renard de la mer</addName>
+                 </persName>
+                 <note>Corsaire dunkerquois, arrière-grand-père de Jean Bart, ayant servi la Couronne d'Espagne.</note>
+                 <date when="1602" type="birth">1602</date>
+                 <date when="1633" type="death">1633</date>
+                 <idno type="Wikidata">https://www.wikidata.org/wiki/Q2350365</idno>
+              </person>
+              <person xml:id="antoine_bart">
+                 <persName>Antoine Bart</persName>
+                 <persName>
+                    <forename>Antoine</forename>
+                    <surname>Bart</surname>
+                 </persName>
+                 <note>Père de Cornille Bart.</note>
+              </person>
+           </listPerson>
+        </particDesc>
+     </profileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <div type="livre" n="1">
+            <head>LIVRE PREMIER</head>
+            <div type="chapitre" n="1">
+            <head>Chapitre Ier</head>
+            <!-- Le présent fichier ne commence pas au début du chapitre -->
+            <p/>
+         <p>Enfin <persName ref="#cornille_bart">le capitaine</persName> atteignit le fauteuil et s'y laissa tomber pesamment, en poussant une nouvelle exclamation d'angoisse.
+            - <said aloud="true" direct="true" who="#catherine_bart">Sainte Vierge! mon ami, souffrez-vous donc davantage?</said>
+            s'écria <persName ref="#catherine_bart">mademoiselle Bart</persName> avec effroi.
+            — <said aloud="true" direct="true" who="#cornille_bart">Non, non, <persName ref="#cornille_bart">Catherine</persName>, c'est l'appareil qui s'est un peu dérangé, je crois. Voilà tout</said>.
+            A chaque cri de <persName ref="#cornille_bart">maître Cornille</persName>, les sourcils prononcés de  <persName ref="#jean_bart">son fils</persName> s'étaient fortement contractés, tandis que <persName ref="#jacques_seyrac">le vieux Sauret</persName> murmurait entre ses dents je ne sais quelle imprécation contre ceux d'<hi rend="italic">outre-mer</hi>.
+               Lorsque <persName ref="#cornille_bart">maître Cornille</persName> fut bien assis et accommodé dans son fauteuil, il tourna languissamment ses yeux éteints vers <persName ref="#catherine_bart">sa femme</persName>, qui le regardait en silence avec une expression de tendresse et de douleur inexprimable, tout en serrant sur son sein la tête de <persName ref="#jean_bart">son fils</persName>.
+               - <said aloud="true" direct="true" who="#cornille_bart">Dieu est juste, <persName ref="#catherine_bart">ma bonne Catherine</persName></said>, dit <persName ref='#cornille_bart'>Cornille Bart</persName>; <said aloud="true" direct="true" who="#cornille_bart">j'espère qu'il récompensera tes bons soins en ne nous séparant pas encore, et en me laissant vivre pour élever <persName ref='#jean_bart'>notre petit Jean</persName>, de telle sorte qu'il devienne un brave et digne marin de guerre, car c'est lui, parmi nos enfants, que je destine à cet état. Les autres garçons navigueront pour les bourgeois. Mais lui, s'il plaît à Dieu, fera la guerre comme mon père et moi l'avons faite</said>.
+               <persName ref="#catherine_bart">Catherine</persName> leva au ciel ses yeux baignés de larmes, comme pour le prier d'exaucer la prière de <persName ref="#cornille_bart">son mari</persName>, et <persName ref='#jean_bart'>Jean</persName> fronça de nouveau les sourcils.
+               — <said aloud="true" direct="true" who="#cornille_bart">Mais</said>, dit <persName ref="#cornille_bart">Cornille Bart</persName>, <said aloud="true" direct="true" who="#cornille_bart">il me semble, mon vieux Sauret, que le feu a été peu vif aujourd'hui</said> ?
+               — <said aloud="true" direct="true" who="#jacques_seyrac">Oui, <persName ref="#cornille_bart">maître</persName>. Mais on assure que <persName ref="#hocquincourt">M. le maréchal de Hocquincourt</persName> a été tué ce matin dans une sortie par les enfants perdus de <persName ref="#turenne">M. de Turenne</persName></said>.
+               — <said aloud="true" direct="true" who="#cornille_bart">Bonne fin pour lui, qui se battait contre son pays. et pourtant c'était un capitaine ! Je l'ai vu fort et vaillant au vieux <placeName ref="#mardyck">Mardyk</placeName>. Mais à quoi sert la valeur, quand on défend une mauvaise cause? Hélas! hélas! en quel temps <placeName ref="#dunkerque">Dunkerque</placeName> serat-il enfin, et une bonne fois, et pour toujours, à la France, et à jamais délivré de l'Anglais et de l'Espagnol ?. Seigneur Dieu, je crains bien de ne pas voir cette bonne heure</said>.
+               — <said aloud="true" direct="true" who="#catherine_bart">Pourquoi donc cette crainte, mon ami</said>? dit Catherine, <said aloud="true" direct="true" who="#catherine_bart">et puis d'ailleurs <persName ref="#turenne">M. le maréchal de Turenne</persName> ne commande-t-il pas pour le <persName ref="#louis_xiv">roi de France</persName>, aussi bien que <persName ref="#lockhart">milord Lockart</persName> pour le <persName ref="#cromwell">lord protecteur</persName>? Vous m'avez dit vous-même que <placeName ref="#dunkerque">notre ville</placeName> ne pouvait longtemps résister malgré la valeur de <persName ref="lede">monseigneur le marquis de Lède</persName>, parce que l'isue du siège était indifférente aux habitants, bien sûrs qu'ils sont d'une capitulation honorable et avantageuse; et mon Dieu ! mon Dieu ! fasse le ciel que cela soit bientôt, pour que je puisse revoir mes pauvres enfants, qui sont heureusement demeurés à <placeName ref="#bergues">Bergues</placeName> avec ma sœur</said>.
+               — <said aloud="true" direct="true" who="#cornille_bart">Aussi les reverrons-nous bientôt, <persName ref="#catherine_bart">Catherine</persName>, car <placeName ref="#dunkerque">la ville</placeName> ne peut en effet résister longtemps; mais, pour ce qui est de revenir à la France, c'est autre chose. Dans cette guerre, les Anglais garderont sans doute la ville pour se rémunérer d'avoir prêté leur flotte à la France; car c'est une honte pour <persName ref="#mazarin">le cardinal</persName> de penser qu'on n'a eu qu'un seul <ref target="#brulot" resp="editeur">brûlot</ref> à envoyer à l'armée anglaise ; oui, <persName ref="#catherine_bart">Catherine</persName>, un brûlot, c'est tout ce qu'on a pu trouver dans les ports du Ponant. Je ne dis rien des galères du Levant, car elles ne peuvent naviguer dehors la Méditerranée; mais aussi bien. Femme, assez de ce siège</said>, dit <persName ref="#cornille_bart">Cornille</persName> en se retournant avec peine.
+               — <said aloud="true" direct="true" who="#catherine_bart">Plût au ciel que vous eussiez toujours dit cela, mon ami, et qu'il y a tantôt dix jours vous n'eussiez pas tenté de sortir du canal pour essayer d'enlever cette ramberge d'Angleterre<note place="foot">Grand navire de guerre de la force d'une frégate de nos jours.</note> ! alors vous n'eussiez pas été blessé</said>. 
+               - <said aloud="true" direct="true" who="#cornille_bart">Eh ! que veux-tu, <persName ref="#catherine_bart">femme</persName>? c'est la chance de la guerre. Mais dis-moi, <persName ref="#jean_bart">mon petit Jean</persName>, ajouta <persName ref="#cornille_bart">maître Cornille</persName> en attirant <persName ref="#jean_bart">son fils</persName> entre ses jambes et jouant avec ses grands cheveux, dis-moi donc, <persName ref="#jean_bart">mon petit Jean</persName>, à quoi penses-tu là, tout triste et tout soucieux comme un écolier qui craint la férule du recteur</said>?
+               — <said aloud="true" direct="true" who="#jean_bart">Oh ! c'est que... je pense au grand <persName ref="#john_brish">John Brish</persName>... <persName ref='cornille_bart'>mon père</persName>, répondit <persName ref="#jean_bart">l'enfant</persName> d'un ton de colère concentrée</said>.
+               — <said aloud="true" direct="true" who="#cornille_bart">Et qu'est-ce que <persName ref="#john_brish">le grand John Brish</persName>, <persName ref="#jean_bart">mon petit Jean</persName></said> ?
+               - <said aloud="true" direct="true" who="#jacques_seyrac">Révérence parler, <persName ref="#cornille_bart">maître</persName></said>, dit <persName ref="#jacques_seyrac">Sauret</persName> en s'avançant avec timidité, <said aloud="true" direct="true" who="#jacques_seyrac"><persName ref="#john_brish">John Brish</persName> est le fils de cet ancien <ref target="#bosseman" resp="editeur">bosseman</ref> anglais notre voisin, si bien que <persName ref="#jean_bart">notre jeune monsieur Jean</persName>, depuis que vous êtes blessé, <persName ref="#cornille_bart">maître</persName>, ne peut voir ni rencontrer ce <persName ref="#john_brish">John Brish</persName> sans le bâtonner, s'il a <ref target="#houssine" resp="editeur">houssine</ref> ou'bâton à la main, ou bien, à défaut, le <ref target="#gourmer" resp="editeur">gourmer</ref> simplement à furieux coups de poing</said>.
+               — <said aloud="true" direct="true" who="#catherine_bart">Seigneur Dieu, encore des querelles</said> ! dit <persName ref="#catherine_bart">la pauvre mère effrayée</persName> ; — <said aloud="true" direct="true" who="#catherine_bart">et pourquoi cela, <persName ref="#jean_bart">Jean</persName>... pourquoi battez-vous ainsi - <persName ref="#john_brish">cet Anglais</persName>?... juste ciel!...</said> 
+               — <said aloud="true" direct="true" who="#jean_bart">Je bats <persName ref="#john_brish">cet Anglais</persName>, <persName ref="#catherine_bart">ma mère</persName>, parce que les Anglais ont blessé <persName ref="#cornille_bart">mon père</persName></said>, — dit résolûment <persName ref="#jean_bart">le fils de Cornille Bart</persName>. Et ce dernier ne put s'empêcher de sourire.
+            - <said aloud="true" direct="true" who="#jacques_seyrac">Oui, oui, c'est pour cela même</said>, dit <persName ref="jacques_seyrac">Sauret</persName> en secouant la tête d'un air triomphant, <said aloud="true" direct="true" who="#jacques_seyrac">c'est pour cela même que <persName ref="#john_brish">John Brish</persName> reçoit une telle <ref target="#pitance" resp="editeur">pitance</ref> de <ref target="#gourmade" resp="editeur">gourmades</ref>. Aussi, dès qu'on voit en même temps dans la rue <persName ref="#jean_bart">notre brave jeune monsieur</persName> et <persName ref="#john_brish">ce grand roseau d'outre mer</persName>, tous les voisins sont à's'appeler en criant : Oh là! hé! venez donc voir <persName ref="#jean_bart">le petit à maître Cornille</persName> qui va donner sa râtelée au <persName ref="#john_brish">fils du bosseman anglais</persName>;... et pourtant, maître, le fils du bosseman est bien plus grand et a bien trois ans de plus que <persName ref="#jean_bart">notre jeune monsieur</persName>. Ah <persName ref="#catherine_bart">dame</persName>! aussi, <persName ref="#cornille_bart">maître</persName>, <persName ref="#jean_bart">notre jeune monsieur</persName> vous fait honneur dans <placeName ref="dunkerque">Dunkerque</placeName> ; <ref target="#pitance" resp="editeur">vertubleu</ref> ! on en parle depuis <placeName ref="#veurne">Furnes</placeName> jusqu'à l'<placeName ref="#effarinchouque">Effarinchouque</placeName>. Et cette autre fois donc, il y a un an, quand, avec deux mousses de <placeName ref="#hollande">Hollande</placeName>, <persName ref="#jean_bart">notre jeune monsieur</persName> s'en est allé bravement dans la haute mer avec cette petite barque qu'ils avaient dérobée. Oh! c'est ça qui est encore glorieux... d'autant qu'au partir le temps était bonasse<note place="foot" resp="auteur"><hi rend="italic">Temps bonasse</hi>. On entendait alors par cette expression un temps pendant lequel le bâtiment ne pouvait être tourmenté ni par la mer ni par le vent, sans que cependant ce temps fût parfaitement propre à la navigation qu'on voulait faire.</note>, et qu'au retour le vent était d'aval<note place="foot" type="auteur"><hi rend="italic">Vent d'aval</hi>. C'est, sur les rivières, le vent opposé au cours de l'eau, surtout quand ce cours est est et ouest. Sur les ports de mer, c'est aussi le vent d'ouest, surtout quand il vient de la nier. Ce mot vient sûrement du vieux mot avaler, encore en usage dans quelques provinces pour exprimer descendre.</note> et si méfaisant, que <persName ref="#jean_bart">notre jeune monsieur</persName>, qui s'était fait capitaine de cette coquille de noix, a failli périr dans cette braverie avec deux mousses qu'il battait à grands coups de rame, parce qu'il ne parlait pas leur langue, et qu'il ne savait comment leur faire comprendre qu'ils ne devaient pas avoir peur. Ah! min Dieu !... c'est ça qui était fier de naviguer par un temps pareil ; car tant plus on a des riottes<note place="foot" resp="auteur"><hi rend="italic">Riotte</hi> (vieux mot), querelle, dispute.</note> avec le vent de la mer, tant plus c'est glorieux, et tant plus</said>.
+               — <said aloud="true" direct="true" who="#catherine_bart">Taisez-vous, <persName ref="#jacques_seyrac">Sauret</persName>, vous n'êtes qu'un sot</said>, dit <persName ref="#catherine_bart">mademoiselle Bart</persName>; <said aloud="true" direct="true" who="#catherine_bart">allez chercher de la lumière, au lieu d'encourager <persName ref="#jean_bart">ce pauvre enfant</persName> à de pareilles sottises; et vous, <persName ref="#cornille_bart">mon ami</persName>, ne grondez-vous pas <persName ref="#jean_bart">votre fils</persName> de s'exposer ainsi, et d'être toujours sur le port, ou à monter aux mâts des vaisseaux, au lieu d'aller à l'école des pères minimes!. Enfin, <persName ref="#cornille_bart">mon ami</persName>, bien que vous ayez ordonné à <persName ref="#jacques_seyrac">Sauret</persName> de lui apprendre à lire, <persName ref="#jean_bart">Jean</persName> connaît à peine ses lettres, et nos autres enfants lisent presque couramment</said>.
+            - <said aloud="true" direct="true" who="#cornille_bart">C'est vrai, <persName ref="#catherine_bart">femme</persName>; mais <persName ref="#jean_bart">mon petit Jean</persName> sait lire dans le gréement d'un vaisseau, et il pourrait te nommer les mâts, voiles et manœuvres d'un navire, depuis l'<hi rend="italic">arbre</hi><note place="foot" resp="auteur">L'<hi rend="italic">arbre</hi>, le grand mât; le bourset, grand mât de hune; le grand <hi rend="italic">pacfi</hi>, <choice><sic>a</sic><corr>la</corr></choice> grande voile.</note> jusqu'au bourset, et depuis le grand pacfi jusqu'au bâton d'enseigne. Après tout, <persName ref="#catherine_bart">femme</persName>, je ne veux pas en faire un clerc non plus</said>.
+               — <said aloud="true" direct="true" who="#catherine_bart">Mais <persName ref="#jean_bart">votre fils</persName> se fera tuer ou noyer, Seigneur Dieu... si vous l'encouragez ainsi</said>, dit <persName ref="#catherine_bart">Catherine Bart</persName> les larmes aux yeux.
+               - <said aloud="true" direct="true" who="#cornille_bart">Oui, oui, tu as raison</said>, dit <persName ref="#cornille_bart">le corsaire</persName> en prenant un air d'apparente sévérité, <said aloud="true" direct="true" who="#cornille_bart">oui, tu as raison, et <persName ref="#jean_bart">Jean</persName> a tort; il ne faut ni aller en mer, ni battre les Anglais, entendez-vous bien, <persName ref="#jean_bart">mon fils</persName></said> ? 
+            — <said aloud="true" direct="true" who="#jean_bart">Et moi, <persName ref="#catherine_bart">ma mère</persName>, je vous dis que je battrai <persName ref="#john_brish">John</persName> comme un chien toutes fois que je le rencontrerai, parce qu'il a dit joyeusement, quand <persName ref="#cornille_bart">mon père</persName> a été blessé : <hi rend="italic">Huzza, <persName ref="#cornille_bart">le Français</persName> a reçu son poivre</hi>. — Aussi moi je lui donnerai, à mon tour, poivre, sel et autres saupiquets<note place="foot" resp="auteur"><hi rend="italic">Saupiquet</hi> (vieux mot), épices</note> pour voir quel goût il y trouvera; et puis d'ailleurs, <persName ref="#jacques_seyrac"><hi rend="italic">Sauret</hi></persName> dit que chaque <ref target="#lardon" resp="editeur">lardon</ref> que je donne à <persName ref="#john_brish">Jean Brish</persName> ôte une souffrance à <persName ref="#cornille_bart">mon père</persName></said>.
+               — <said aloud="true" direct="true" who="#catherine_bart">Vous l'entendez! mon ami... c'est <persName ref="#jacques_seyrac">Sauret</persName> qui excite ainsi ce pauvre enfant</said>.
+               — <said aloud="true" direct="true" who="#jean_bart">Pour cela, non, <persName ref="#catherine_bart">ma mère</persName> ; car, si j'ai battu <persName ref="#john_brish">John Brish</persName>, c'est de moi-même, s'il vous plaît, et c'est de moi même que je le battrai encore</said>.
+            — <said aloud="true" direct="true" who="#cornille_bart">Allons, <persName ref="#jean_bart">Jean</persName></said>, dit <persName ref="#cornille_bart">le corsaire</persName> d'un air fort sérieux, <said aloud="true" direct="true" who="#cornille_bart">ne répondez pas ainsi à <persName ref="#catherine_bart">votre mère</persName>, ou je vous punirai et ne vous raconterai plus les histoires du vieux <persName ref="#michel_jacobsen">Jacobsen</persName>, <persName ref="#jacobsen"><hi rend="italic">le Renard de la mer</hi></persName>, comme nous l'appelions autrefois, du temps qu'il était capitaine de mon père <persName ref="#antoine_bart">Antoine Bart</persName>, de ton grand-père, <persName ref="#jean_bart">mon petit Jean</persName></said>.
+               — <said aloud="true" direct="true" who="#jean_bart">Oh ! contez, contez, <persName ref="#cornille_bart">mon père</persName></said>, s'écria <persName ref="#jean_bart">Jean</persName> tout joyeux en s'asseyant aux pieds de <persName ref="#cornille_bart">maître Cornille</persName>.
+               — <said aloud="true" direct="true" who="#catherine_bart">Vous allez vous fatiguer de nouveau, <persName ref="#cornille_bart">mon ami</persName></said>, dit <persName ref="#catherine_bart">Catherine</persName>; <said aloud="true" direct="true" who="#catherine_bart">songez donc que le physicien a surtout recommandé de peu parler</said>.
+               — <said aloud="true" direct="true" who="#cornille_bart">Bon... n'aie pas de crainte... je parlerai doucement. Et puis ne faut-il pas que <persName ref="#jean_bart">mon fils</persName> sache au moins que <persName ref="#antoine_bart">son grandpère</persName> n'est pas mort sans gloire, et comment il a succombé vaillamment sous le canon de l'Anglais</said>!
+               — <said aloud="true" direct="true" who="#jean_bart"><persName ref="#antoine_bart">Mon grand-père</persName> est mort blessé par l'Anglais</said>? s'écria <persName ref="#jean_bart">Jean Bart</persName> en sentant sa colère se raviver contre <persName ref="#john_brish">John Brish</persName>.
+               - <said aloud="true" direct="true" who="#cornille_bart">Oui, <persName ref="#jean_bart">mon petit héros</persName>, c'est en combattant l'Anglais que <persName ref="#antoine_bart">ton grand-père</persName> est mort</said>.
+               — <said aloud="true" direct="true" who="#jacques_seyrac">Ah! pour cette fois, fourche de <persName ref="#john_brish">John Brish</persName>... merci de moi... s'il ne reste pas meurtri de cette dernière râtelée</said>! — s'écria <persName ref="#jacques_seyrac">Sauret</persName> qui venait d'entrer avec une lampe de cuivre à trois becs.
+               Mais un regard sévère de <persName ref="#catherine_bart">mademoiselle Bart</persName> l'arrêta court.
+         Aussi, mettant sa lampe sur un des <ref target="#bahut" resp="editeur">bahuts</ref>, il resta muet et confus.
+         — <said aloud="true" direct="true" who="#cornille_bart">Allons, pardonne-lui, <persName ref="#catherine_bart">Catherine</persName>, c'est un vieux et fidèle serviteur qui aime <persName ref="#jean_bart">notre petit Jean</persName> à sa manière</said>, dit <persName ref="#cornille_bart">Cornille</persName> ; — et, sur un signe de <persName ref="#catherine_bart">Catherine</persName>, il ajouta : — <said aloud="true" direct="true" who="#cornille_bart"><persName ref="#catherine_bart">Ma femme</persName> te pardonne. Allons, va chercher ton chantier et ta galère, mets-toi là, et viens écouter, aussi, car tu aimes autant ces récits que <persName ref="#cjean_bart">mon petit Jean</persName> lui-même</said>.
+               <persName ref="#jacques_seyrac">Sauret</persName> sortit tout joyeux et revint bientôt avec sa galère et ses outils, puis il s'assit par terre aux pieds de <persName ref="#cornille_bart">maître Cornille</persName>.
+         A ce moment, le canon, qui avait cessé, se fit entendre de nouveau.
+         — <said aloud="true" direct="true" who="#jean_bart">Le canon? — C'est le canon</said>! s'écria <persName ref="#jean_bart">Jean</persName> en bondissant sur son escabeau
+               — <said aloud="true" direct="true" who="#cornille_bart">Oui, le feu recommence</said>, dit <persName ref="#cornille_bart">Cornille</persName>.
+               <persName ref="#catherine_bart">Catherine</persName> se signa, et prit sa quenouille.
+            — <said aloud="true" direct="true" who="#cornille_bart">Et sur ma foi, <persName ref="#jean_bart">mon petit Jean</persName> , toute cette artillerie accompagnera dignement le récit des faits d'armes de <persName ref="#antoine_bart">ton grandpère</persName> et du <persName ref="#michel_jacobsen"><hi rend="italic">Renard de la mer</hi></persName>, car c'est à ce bruit qu'ils ont conquis leur glorieuse renommée !</said> - dit <persName ref="#cornille_bart">maître Cornille</persName> avec enthousiasme.
+               Et, en vérité, il y avait quelque chose de grand et d'héroïque dans cette scène; car c'était beau de voir <persName ref="#cornille_bart">cet intrépide marin</persName> presque mourant de ses blessures, au milieu des dangers d'un siège, raconter à <persName ref="#jean_bart">son fils</persName>, au bruit sourd et prolongé du canon, la fin glorieuse de <persName ref="#antoine_bart">son père</persName>.</p>
+            </div>
+         </div>
+      </body>
+  </text>
+  <standOff type="glossaire">
+     <!-- Très bien, bravo -->
+     <entry xml:id="bosseman">
+        <form>
+           <orth>bosseman</orth>
+           <orth>bosco</orth>
+           <orth>boatswain</orth>
+        </form>
+        <gramGrp>
+           <pos>nom</pos>
+           <gen>masculin</gen>
+        </gramGrp>
+        <usg>Marine</usg>
+        <usg>Vieilli</usg>
+        <def>Nom que l'on donnait autrefois au sous-officier de marine ayant le grade intermédiaire entre ceux de contre-maître et de quartiermaître.</def>
+     </entry>
+     <entry xml:id="brulot">
+        <form>
+           <orth>brûlot</orth>
+        </form>
+        <gramGrp>
+           <pos>nom</pos>
+           <gen>masculin</gen>
+        </gramGrp>
+        <usg>Marine</usg>
+        <def>Petit bâtiment rempli de matières combustibles et lancé contre des vaisseaux ennemis pour y mettre le feu.</def>
+     </entry>
+     <entry xml:id="houssine">
+        <form>
+           <orth>houssine</orth>
+        </form>
+        <gramGrp>
+           <pos>nom</pos>
+           <gen>féminin</gen>
+        </gramGrp>
+        <def>Verge, baguette de houx ou d'autre arbre, dont on se sert pour faire aller un cheval, ou pour battre des habits, des meubles, etc.</def>
+     </entry>
+     <entry xml:id="gourmer">
+        <form>
+           <orth>gourmer</orth>
+        </form>
+        <gramGrp>
+           <pos>verbe</pos>
+        </gramGrp>
+        <usg>Familier</usg>
+        <def>Mettre la gourmette à un cheval. Signifie aussi, familièrement, Battre à coups de poing.</def>
+     </entry>
+     <entry xml:id="gourmade">
+        <form>
+           <orth>gourmade</orth>
+        </form>
+        <gramGrp>
+           <pos>nom</pos>
+           <gen>féminin</gen>
+        </gramGrp>
+        <usg>Familier</usg>
+        <def>Coup de poing.</def>
+     </entry>
+     <entry xml:id="pitance">
+        <form>
+           <orth>pitance</orth>
+        </form>
+        <gramGrp>
+           <pos>nom</pos>
+           <gen>féminin</gen>
+        </gramGrp>
+        <usg>Familier</usg>
+        <def>La portion de pain, de vin, de viande, etc., qu'on donne à chaque repas, dans les communautés. Il se dit familièrement, par extension, de La subsistance journalière des personnes qui ne vivent point en communauté. </def>
+     </entry>
+     <entry xml:id="vertubleu">
+        <form>
+           <orth>vertubleu</orth>
+        </form>
+        <gramGrp>
+           <pos>interjection</pos>
+        </gramGrp>
+        <usg>Familier</usg>
+        <def>Jurons de l'ancienne comédie.</def>
+     </entry>
+     <entry xml:id="lardon">
+        <form>
+           <orth>lardon</orth>
+        </form>
+        <gramGrp>
+           <pos>nom</pos>
+           <gen>masculin</gen>
+        </gramGrp>
+        <usg>Familier</usg>
+        <def>Se dit, figurément et familièrement, d'Un brocard, d'un sarcasme, d'une raillerie piquante contre quelqu'un.</def>
+     </entry>
+     <entry xml:id="bahut">
+        <form>
+           <orth>bahut</orth>
+        </form>
+        <gramGrp>
+           <pos>nom</pos>
+           <gen>masculin</gen>
+        </gramGrp>
+        <def>Sorte de coffre, couvert ordinairement de cuir, et dont le couvercle est en voûte.</def>
+     </entry>
+  </standOff>
+</TEI>
